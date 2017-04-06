@@ -1,0 +1,1232 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jaredhanson/electrolyte#readme"
+
+    >electrolyte (v0.4.0)</a>
+</h1>
+<h4>Elegant dependency injection for Node.js.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electrolyte">module electrolyte</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container">
+            function <span class="apidocSignatureSpan">electrolyte.</span>Container
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.dir">
+            function <span class="apidocSignatureSpan">electrolyte.</span>dir
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.fs">
+            function <span class="apidocSignatureSpan">electrolyte.</span>fs
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.injectedcontainer">
+            function <span class="apidocSignatureSpan">electrolyte.</span>injectedcontainer
+            <span class="apidocSignatureSpan">(c, spec, ns)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.node">
+            function <span class="apidocSignatureSpan">electrolyte.</span>node
+            <span class="apidocSignatureSpan">(arg0)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.node_modules">
+            function <span class="apidocSignatureSpan">electrolyte.</span>node_modules
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.spec">
+            function <span class="apidocSignatureSpan">electrolyte.</span>spec
+            <span class="apidocSignatureSpan">(id, mod, source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">electrolyte.</span>_eventsCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>Container.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>_events</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>_order</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>_resolvers</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>_sources</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>_specs</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>domain</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>injectedcontainer.prototype</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">electrolyte.</span>spec.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electrolyte.Container">module electrolyte.Container</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.Container">
+            function <span class="apidocSignatureSpan">electrolyte.</span>Container
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.super_">
+            function <span class="apidocSignatureSpan">electrolyte.Container.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electrolyte.Container.prototype">module electrolyte.Container.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype._create">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>_create
+            <span class="apidocSignatureSpan">(id, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype._loadSpec">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>_loadSpec
+            <span class="apidocSignatureSpan">(id, cb)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype._registerSpec">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>_registerSpec
+            <span class="apidocSignatureSpan">(id, mod, source)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype.create">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>create
+            <span class="apidocSignatureSpan">(id, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype.loader">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>loader
+            <span class="apidocSignatureSpan">(arg0, arg1, arg2)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype.resolve">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>resolve
+            <span class="apidocSignatureSpan">(id, parent)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype.resolver">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>resolver
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype.specs">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>specs
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.Container.prototype.use">
+            function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>use
+            <span class="apidocSignatureSpan">(ns, s, options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electrolyte._resolvers">module electrolyte._resolvers</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte._resolvers.0">
+            function <span class="apidocSignatureSpan">electrolyte._resolvers.</span>0
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electrolyte.injectedcontainer">module electrolyte.injectedcontainer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.injectedcontainer.injectedcontainer">
+            function <span class="apidocSignatureSpan">electrolyte.</span>injectedcontainer
+            <span class="apidocSignatureSpan">(c, spec, ns)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electrolyte.injectedcontainer.prototype">module electrolyte.injectedcontainer.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.injectedcontainer.prototype.create">
+            function <span class="apidocSignatureSpan">electrolyte.injectedcontainer.prototype.</span>create
+            <span class="apidocSignatureSpan">(id)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.injectedcontainer.prototype.specs">
+            function <span class="apidocSignatureSpan">electrolyte.injectedcontainer.prototype.</span>specs
+            <span class="apidocSignatureSpan">(q)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electrolyte.spec">module electrolyte.spec</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.spec.spec">
+            function <span class="apidocSignatureSpan">electrolyte.</span>spec
+            <span class="apidocSignatureSpan">(id, mod, source)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.electrolyte.spec.prototype">module electrolyte.spec.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.spec.prototype.create">
+            function <span class="apidocSignatureSpan">electrolyte.spec.prototype.</span>create
+            <span class="apidocSignatureSpan">(container)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.electrolyte.spec.prototype.instantiate">
+            function <span class="apidocSignatureSpan">electrolyte.spec.prototype.</span>instantiate
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electrolyte" id="apidoc.module.electrolyte">module electrolyte</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container" id="apidoc.element.electrolyte.Container">
+        function <span class="apidocSignatureSpan">electrolyte.</span>Container
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Container() {
+  EventEmitter.call(this);
+  this._specs = {};
+  this._sources = {};
+  this._order = [];
+  this._resolvers = [];
+
+  this.resolver(require(&#x27;./resolvers/id&#x27;)());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.dir" id="apidoc.element.electrolyte.dir">
+        function <span class="apidocSignatureSpan">electrolyte.</span>dir
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">dir = function (options) {
+  if (&#x27;string&#x27; == typeof options) {
+    options = { dirname: options }
+  }
+  options = options || {};
+  var dirname = options.dirname || &#x27;app&#x27;
+    , extensions = options.extensions
+    , dir = path.resolve(dirname);
+
+  return function app(id) {
+    var aid = path.join(dir, id)
+      , script = scripts.resolve(aid, extensions);
+
+    if (!existsSync(script)) { return; }
+    return require(script);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### Configure the Loader
+
+When a component is `@require`&#x27;d by another component, Electrolyte will
+automatically load and instantiate it.  The loader needs to be configured with
+location where an application&#x27;s components are found:
+
+```javascript
+IoC.use(IoC.<span class="apidocCodeKeywordSpan">dir</span>(&#x27;app/components&#x27;));
+```
+
+#### @require vs require()
+
+Loading components is similar in many regards to `require`ing a module, with
+one primary difference: components have the ability to return an object that
+is configured according to application-level or environment-specific settings.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.fs" id="apidoc.element.electrolyte.fs">
+        function <span class="apidocSignatureSpan">electrolyte.</span>fs
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">fs = function (options) {
+  if (&#x27;string&#x27; == typeof options) {
+    options = { dirname: options }
+  }
+  options = options || {};
+  var dirname = options.dirname || &#x27;app&#x27;
+    , extensions = options.extensions
+    , dir = path.resolve(dirname);
+
+  return function app(id) {
+    var aid = path.join(dir, id)
+      , script = scripts.resolve(aid, extensions);
+
+    if (!existsSync(script)) { return; }
+    return require(script);
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.injectedcontainer" id="apidoc.element.electrolyte.injectedcontainer">
+        function <span class="apidocSignatureSpan">electrolyte.</span>injectedcontainer
+        <span class="apidocSignatureSpan">(c, spec, ns)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InjectedContainer(c, spec, ns) {
+  this._c = c;
+  this._spec = spec;
+  this._ns = ns || &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.node" id="apidoc.element.electrolyte.node">
+        function <span class="apidocSignatureSpan">electrolyte.</span>node
+        <span class="apidocSignatureSpan">(arg0)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node = function (arg0) {
+&#x22;use strict&#x22;
+log.call(deprecate, message, site)
+return fn.apply(this, arguments)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.node_modules" id="apidoc.element.electrolyte.node_modules">
+        function <span class="apidocSignatureSpan">electrolyte.</span>node_modules
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">node_modules = function () {
+
+  return function(id) {
+    try {
+      var module = require(id);
+      module[&#x27;@literal&#x27;] = true;
+      return module;
+    } catch (ex) {
+      return;
+    }
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+inject modules themselves.  This is typical with modules that provide
+network-related functionality that needs to be mocked out in test environments.
+
+Electrolyte can be configured to do this automatically, by configuring the loader
+to inject modules:
+
+```javascript
+IoC.use(IoC.<span class="apidocCodeKeywordSpan">node_modules</span>());
+````
+
+With that in place, the database component above can be re-written as follows:
+
+```javascript
+exports = module.exports = function(mysql, settings) {
+var connection = mysql.createConnection({
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.spec" id="apidoc.element.electrolyte.spec">
+        function <span class="apidocSignatureSpan">electrolyte.</span>spec
+        <span class="apidocSignatureSpan">(id, mod, source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Spec(id, mod, source) {
+  var keys, i, len;
+
+  this.id = id;
+  this.dependencies = mod[&#x27;@require&#x27;] || [];
+  this.singleton = mod[&#x27;@singleton&#x27;];
+  this.implements = mod[&#x27;@implements&#x27;] || [];
+  if (typeof this.implements == &#x27;string&#x27;) {
+    this.implements = [ this.implements ]
+  }
+  this.a = {};
+
+  if (typeof mod === &#x27;object&#x27; || typeof mod === &#x27;function&#x27;) {
+    keys = Object.keys(mod);
+    for (i = 0, len = keys.length; i &#x3c; len; ++i) {
+      if (keys[i].indexOf(&#x27;@&#x27;) == 0) {
+        this.a[keys[i]] = mod[keys[i]];
+      }
+    }
+  }
+  this._source = source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electrolyte.Container" id="apidoc.module.electrolyte.Container">module electrolyte.Container</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.Container" id="apidoc.element.electrolyte.Container.Container">
+        function <span class="apidocSignatureSpan">electrolyte.</span>Container
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Container() {
+  EventEmitter.call(this);
+  this._specs = {};
+  this._sources = {};
+  this._order = [];
+  this._resolvers = [];
+
+  this.resolver(require(&#x27;./resolvers/id&#x27;)());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.super_" id="apidoc.element.electrolyte.Container.super_">
+        function <span class="apidocSignatureSpan">electrolyte.Container.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electrolyte.Container.prototype" id="apidoc.module.electrolyte.Container.prototype">module electrolyte.Container.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype._create" id="apidoc.element.electrolyte.Container.prototype._create">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>_create
+        <span class="apidocSignatureSpan">(id, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_create = function (id, parent) {
+  var psource = parent ? parent._source : undefined;
+
+  // built-ins
+  switch (id) {
+  case &#x27;!container&#x27;:
+    return Promise.resolve(new InjectedContainer(this, parent, psource &#x26;&#x26; psource.namespace));
+  }
+
+  return new Promise(function(resolve, reject) {
+    if (parent &#x26;&#x26; id[0] == &#x27;.&#x27;) {
+      // resolve relative component ID
+      id = path.join(path.dirname(parent.id), id);
+    }
+    id = this.resolve(id, parent);
+
+    var spec = this._specs[id];
+    if (spec) {
+      return resolve(spec.create(this));
+    } else {
+      var self = this;
+      this._loadSpec(id, function(err, spec) {
+        if (err &#x26;&#x26; err.code == &#x27;SPEC_NOT_FOUND&#x27;) {
+          reject(new Error(&#x27;Unable to create object &#x22;&#x27; + id + &#x27;&#x22; required by: &#x27; + (parent &#x26;&#x26; parent.id || &#x27;unknown&#x27;)));
+        } else if (err) {
+          return reject(err);
+        }
+        resolve(spec.create(self))
+      });
+    }
+  }.bind(this));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype._loadSpec" id="apidoc.element.electrolyte.Container.prototype._loadSpec">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>_loadSpec
+        <span class="apidocSignatureSpan">(id, cb)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_loadSpec = function (id, cb) {
+  debug(&#x27;autoload %s&#x27;, id);
+  var order = this._order
+    , source, mod, rid
+    , i, len;
+
+  for (i = 0, len = order.length; i &#x3c; len; ++i) {
+    source = this._sources[order[i]];
+    rid = path.relative(source.namespace, id);
+    if (rid.indexOf(&#x27;../&#x27;) == 0) { continue; }
+    mod = source.load(rid);
+
+    if (mod) {
+      spec = this._registerSpec(id, mod, source);
+      return cb(null, spec);
+    }
+  }
+  return cb(new SpecNotFoundError(&#x27;Cannot find spec &#x22;&#x27; + id + &#x27;&#x22;&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype._registerSpec" id="apidoc.element.electrolyte.Container.prototype._registerSpec">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>_registerSpec
+        <span class="apidocSignatureSpan">(id, mod, source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">_registerSpec = function (id, mod, source) {
+  var spec, pattern;
+
+  if (mod[&#x27;@literal&#x27;]) {
+    pattern = &#x27;literal&#x27;;
+  } else if (typeof mod == &#x27;function&#x27;) {
+    // The module exports a function.  If the function name begins with a
+    // capital letter, it will be treated as a constructor.  Otherwise, it will
+    // be treated as a factory function;
+    var name = mod.name || &#x27;anonymous&#x27;;
+    if (name[0] == name[0].toUpperCase()) {
+      pattern = &#x27;constructor&#x27;;
+    } else {
+      pattern = &#x27;factory&#x27;;
+    }
+  }
+
+  switch (pattern) {
+  case &#x27;factory&#x27;:
+    debug(&#x27;register factory %s&#x27;, id);
+    spec = new FactorySpec(id, mod, source);
+    break;
+  case &#x27;constructor&#x27;:
+    debug(&#x27;register constructor %s&#x27;, id);
+    spec = new ConstructorSpec(id, mod, source);
+    break;
+  case &#x27;literal&#x27;:
+  default:
+    debug(&#x27;register literal %s&#x27;, id);
+    spec = new LiteralSpec(id, mod, source);
+    break;
+  }
+
+  this._specs[spec.id] = spec;
+  return spec;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype.create" id="apidoc.element.electrolyte.Container.prototype.create">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>create
+        <span class="apidocSignatureSpan">(id, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (id, parent) {
+  return this._create(id, parent);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### Creating Components
+
+Components are created by asking the IoC container to create them:
+
+```javascript
+var IoC = require(&#x27;electrolyte&#x27;);
+
+var db = IoC.<span class="apidocCodeKeywordSpan">create</span>(&#x27;database&#x27;);
+```
+
+Electrolyte is smart enough to automatically traverse a component&#x27;s dependencies
+(and dependencies of dependencies, and so on), correctly wiring together the
+complete object structure.
+
+In the case of the database above, Electrolyte would first initialize the
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype.loader" id="apidoc.element.electrolyte.Container.prototype.loader">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>loader
+        <span class="apidocSignatureSpan">(arg0, arg1, arg2)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">loader = function (arg0, arg1, arg2) {
+&#x22;use strict&#x22;
+log.call(deprecate, message, site)
+return fn.apply(this, arguments)
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype.resolve" id="apidoc.element.electrolyte.Container.prototype.resolve">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>resolve
+        <span class="apidocSignatureSpan">(id, parent)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolve = function (id, parent) {
+  var resolvers = this._resolvers
+    , fn, rid, i, len;
+  for (i = 0, len = resolvers.length; i &#x3c; len; ++i) {
+    fn = resolvers[i];
+    rid = fn(id, parent &#x26;&#x26; parent.id);
+    if (rid) { return rid; }
+  }
+  throw new Error(&#x27;Unable to resolve interface &#x22;&#x27; + id + &#x27;&#x22; required by: &#x27; + (parent &#x26;&#x26; parent.id || &#x27;unknown&#x27;));
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype.resolver" id="apidoc.element.electrolyte.Container.prototype.resolver">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>resolver
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">resolver = function (fn) {
+  this._resolvers.push(fn);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype.specs" id="apidoc.element.electrolyte.Container.prototype.specs">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>specs
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">specs = function () {
+  // TODO: Wrap specs so they can be created in an optimzied way
+
+  var ids = Object.keys(this._specs)
+    , specs = []
+    , i, len;
+  for (i = 0, len = ids.length; i &#x3c; len; ++i) {
+    specs.push(this._specs[ids[i]]);
+  }
+  return specs;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+InjectedContainer.prototype.specs = function(q) {
+if (q &#x26;&#x26; !Array.isArray(q)) {
+  q = [ q ];
+}
+
+// Filter the exposed specs to only those that exist within the namespace
+// of the object being created.
+var specs = this._c.<span class="apidocCodeKeywordSpan">specs</span>()
+  , exposed = []
+  , spec, rid, i, len;
+for (i = 0, len = specs.length; i &#x3c; len; ++i) {
+  spec = specs[i];
+  rid = path.relative(this._ns, spec.id);
+  if (rid.indexOf(&#x27;../&#x27;) == 0) { continue; }
+  if (!q) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.Container.prototype.use" id="apidoc.element.electrolyte.Container.prototype.use">
+        function <span class="apidocSignatureSpan">electrolyte.Container.prototype.</span>use
+        <span class="apidocSignatureSpan">(ns, s, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">use = function (ns, s, options) {
+  if (typeof ns !== &#x27;string&#x27;) {
+    options = s;
+    s = ns;
+    ns = &#x27;&#x27;;
+  }
+  options = options || {};
+
+  var load = s
+    , manifest = {}
+    , ids, aid, spec, i, len;
+
+  if (typeof s == &#x27;object&#x27;) {
+    manifest = s;
+    load = s.load || function noop(id) { return; };
+  }
+
+  if (typeof load != &#x27;function&#x27;) {
+    throw new Error(&#x22;Container#use requires a load function, was passed a &#x27;&#x22; + (typeof load) + &#x22;&#x27;&#x22;);
+  }
+
+  var h = this._order.length;
+  var source = { namespace: ns, load: load };
+  this._sources[h] = source;
+  this._order.unshift(h);
+
+  ids = Object.keys(manifest);
+  for (i = 0, len = ids.length; i &#x3c; len; ++i) {
+    aid = path.join(source.namespace, ids[i]);
+    spec = manifest[ids[i]];
+    if (spec === load) { continue; }
+    this._registerSpec(aid, spec, source);
+  }
+
+  return this;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### Configure the Loader
+
+When a component is `@require`&#x27;d by another component, Electrolyte will
+automatically load and instantiate it.  The loader needs to be configured with
+location where an application&#x27;s components are found:
+
+```javascript
+IoC.<span class="apidocCodeKeywordSpan">use</span>(IoC.dir(&#x27;app/components&#x27;));
+```
+
+#### @require vs require()
+
+Loading components is similar in many regards to `require`ing a module, with
+one primary difference: components have the ability to return an object that
+is configured according to application-level or environment-specific settings.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electrolyte._resolvers" id="apidoc.module.electrolyte._resolvers">module electrolyte._resolvers</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte._resolvers.0" id="apidoc.element.electrolyte._resolvers.0">
+        function <span class="apidocSignatureSpan">electrolyte._resolvers.</span>0
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">0 = function (id) {
+  if (/^[\w\-\.\/]+$/.test(id)) {
+    return id;
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electrolyte.injectedcontainer" id="apidoc.module.electrolyte.injectedcontainer">module electrolyte.injectedcontainer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.injectedcontainer.injectedcontainer" id="apidoc.element.electrolyte.injectedcontainer.injectedcontainer">
+        function <span class="apidocSignatureSpan">electrolyte.</span>injectedcontainer
+        <span class="apidocSignatureSpan">(c, spec, ns)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function InjectedContainer(c, spec, ns) {
+  this._c = c;
+  this._spec = spec;
+  this._ns = ns || &#x27;&#x27;;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electrolyte.injectedcontainer.prototype" id="apidoc.module.electrolyte.injectedcontainer.prototype">module electrolyte.injectedcontainer.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.injectedcontainer.prototype.create" id="apidoc.element.electrolyte.injectedcontainer.prototype.create">
+        function <span class="apidocSignatureSpan">electrolyte.injectedcontainer.prototype.</span>create
+        <span class="apidocSignatureSpan">(id)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (id) {
+  var aid = path.join(this._ns, id);
+  var rid = path.relative(this._ns, aid);
+  if (rid.indexOf(&#x27;../&#x27;) == 0) {
+    return Promise.reject(new Error(id + &#x27; not within namespace&#x27;));
+  }
+
+  return this._c.create(aid, this._spec);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### Creating Components
+
+Components are created by asking the IoC container to create them:
+
+```javascript
+var IoC = require(&#x27;electrolyte&#x27;);
+
+var db = IoC.<span class="apidocCodeKeywordSpan">create</span>(&#x27;database&#x27;);
+```
+
+Electrolyte is smart enough to automatically traverse a component&#x27;s dependencies
+(and dependencies of dependencies, and so on), correctly wiring together the
+complete object structure.
+
+In the case of the database above, Electrolyte would first initialize the
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.injectedcontainer.prototype.specs" id="apidoc.element.electrolyte.injectedcontainer.prototype.specs">
+        function <span class="apidocSignatureSpan">electrolyte.injectedcontainer.prototype.</span>specs
+        <span class="apidocSignatureSpan">(q)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">specs = function (q) {
+  if (q &#x26;&#x26; !Array.isArray(q)) {
+    q = [ q ];
+  }
+
+  // Filter the exposed specs to only those that exist within the namespace
+  // of the object being created.
+  var specs = this._c.specs()
+    , exposed = []
+    , spec, rid, i, len;
+  for (i = 0, len = specs.length; i &#x3c; len; ++i) {
+    spec = specs[i];
+    rid = path.relative(this._ns, spec.id);
+    if (rid.indexOf(&#x27;../&#x27;) == 0) { continue; }
+    if (!q) {
+      exposed.push(new ExposedSpec(rid, spec));
+    } else if (spec.implements.some(function(i) { return i == q })) {
+      // The spec implements one of the requested interfaces.
+      exposed.push(new ExposedSpec(rid, spec));
+    }
+  }
+  return exposed;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+InjectedContainer.prototype.specs = function(q) {
+if (q &#x26;&#x26; !Array.isArray(q)) {
+  q = [ q ];
+}
+
+// Filter the exposed specs to only those that exist within the namespace
+// of the object being created.
+var specs = this._c.<span class="apidocCodeKeywordSpan">specs</span>()
+  , exposed = []
+  , spec, rid, i, len;
+for (i = 0, len = specs.length; i &#x3c; len; ++i) {
+  spec = specs[i];
+  rid = path.relative(this._ns, spec.id);
+  if (rid.indexOf(&#x27;../&#x27;) == 0) { continue; }
+  if (!q) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electrolyte.spec" id="apidoc.module.electrolyte.spec">module electrolyte.spec</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.spec.spec" id="apidoc.element.electrolyte.spec.spec">
+        function <span class="apidocSignatureSpan">electrolyte.</span>spec
+        <span class="apidocSignatureSpan">(id, mod, source)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Spec(id, mod, source) {
+  var keys, i, len;
+
+  this.id = id;
+  this.dependencies = mod[&#x27;@require&#x27;] || [];
+  this.singleton = mod[&#x27;@singleton&#x27;];
+  this.implements = mod[&#x27;@implements&#x27;] || [];
+  if (typeof this.implements == &#x27;string&#x27;) {
+    this.implements = [ this.implements ]
+  }
+  this.a = {};
+
+  if (typeof mod === &#x27;object&#x27; || typeof mod === &#x27;function&#x27;) {
+    keys = Object.keys(mod);
+    for (i = 0, len = keys.length; i &#x3c; len; ++i) {
+      if (keys[i].indexOf(&#x27;@&#x27;) == 0) {
+        this.a[keys[i]] = mod[keys[i]];
+      }
+    }
+  }
+  this._source = source;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.electrolyte.spec.prototype" id="apidoc.module.electrolyte.spec.prototype">module electrolyte.spec.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.spec.prototype.create" id="apidoc.element.electrolyte.spec.prototype.create">
+        function <span class="apidocSignatureSpan">electrolyte.spec.prototype.</span>create
+        <span class="apidocSignatureSpan">(container)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">create = function (container) {
+  debug(&#x27;create %s&#x27;, this.id);
+
+  // Immediately return cached instance.  Optimization for singleton and literal
+  // components.
+  if (this._instance) { return this._instance; }
+
+  // Create an array of promises which, once resolved, will be an array of
+  // objects that are dependencies of the object being created.
+  var deps = this.dependencies
+    , promises = []
+    , promise, p;
+  for (var i = 0, len = deps.length; i &#x3c; len; ++i) {
+    promise = container.create(deps[i], this);
+    promises.push(promise);
+  }
+
+  // Resolve all the promises, and then instantiate the object with its
+  // dependencies.
+  p = Promise.all(promises)
+    .then(function(args) {
+      var i = this.instantiate.apply(this, args);
+      container.emit(&#x27;create&#x27;, i, this);
+
+      // Once the promise has been resolved, cache the object instance if the
+      // spec was annotated as being a singleton.
+      if (this.singleton) { this._instance = i; }
+      return i;
+    }.bind(this));
+
+  // Cache the promise if the spec was annotated as being a singleton.  This
+  // ensures that a singleton object is resolved, if the object is created
+  // multiple times while waiting for resolution.  Upon the promise being
+  // resolved, the created object will be cached.
+  if (this.singleton) { this._instance = p; }
+  return p;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+#### Creating Components
+
+Components are created by asking the IoC container to create them:
+
+```javascript
+var IoC = require(&#x27;electrolyte&#x27;);
+
+var db = IoC.<span class="apidocCodeKeywordSpan">create</span>(&#x27;database&#x27;);
+```
+
+Electrolyte is smart enough to automatically traverse a component&#x27;s dependencies
+(and dependencies of dependencies, and so on), correctly wiring together the
+complete object structure.
+
+In the case of the database above, Electrolyte would first initialize the
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.electrolyte.spec.prototype.instantiate" id="apidoc.element.electrolyte.spec.prototype.instantiate">
+        function <span class="apidocSignatureSpan">electrolyte.spec.prototype.</span>instantiate
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">instantiate = function () {
+  throw new Error(&#x22;Spec#instantiate must be overridden by subclass&#x22;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
