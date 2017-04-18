@@ -1,22 +1,22 @@
 <svg height="302" width="720" xmlns="http://www.w3.org/2000/svg">
 <rect height="302" fill="#555" width="720"></rect>
 <text fill="#7f7" font-family="Courier New" font-size="12" xml:space="preserve">
-<tspan x="10" y="26">  0.  2017-04-18 21:41:49 +0000    46738 bytes  .</tspan>
-<tspan x="10" y="42">  1.  2017-04-18 21:41:49 +0000     1084 bytes  LICENSE</tspan>
-<tspan x="10" y="58">  2.  2017-04-18 21:41:49 +0000     9497 bytes  README.md</tspan>
-<tspan x="10" y="74">  3.  2017-04-18 21:41:49 +0000     8702 bytes  lib/container.js</tspan>
-<tspan x="10" y="90">  4.  2017-04-18 21:41:49 +0000      423 bytes  lib/errors/specnotfound.js</tspan>
-<tspan x="10" y="106">  5.  2017-04-18 21:41:49 +0000      139 bytes  lib/exposedspec.js</tspan>
-<tspan x="10" y="122">  6.  2017-04-18 21:41:49 +0000      400 bytes  lib/index.js</tspan>
-<tspan x="10" y="138">  7.  2017-04-18 21:41:49 +0000     2552 bytes  lib/injectedcontainer.js</tspan>
-<tspan x="10" y="154">  8.  2017-04-18 21:41:49 +0000     1914 bytes  lib/patterns/constructor.js</tspan>
-<tspan x="10" y="170">  9.  2017-04-18 21:41:49 +0000     1003 bytes  lib/patterns/factory.js</tspan>
-<tspan x="10" y="186"> 10.  2017-04-18 21:41:49 +0000     1119 bytes  lib/patterns/literal.js</tspan>
-<tspan x="10" y="202"> 11.  2017-04-18 21:41:49 +0000      819 bytes  lib/resolvers/id.js</tspan>
-<tspan x="10" y="218"> 12.  2017-04-18 21:41:49 +0000     1501 bytes  lib/sources/dir.js</tspan>
-<tspan x="10" y="234"> 13.  2017-04-18 21:41:49 +0000      727 bytes  lib/sources/node_modules.js</tspan>
-<tspan x="10" y="250"> 14.  2017-04-18 21:41:49 +0000     3974 bytes  lib/spec.js</tspan>
-<tspan x="10" y="266"> 15.  2017-04-18 21:41:49 +0000     9829 bytes  logo.svg</tspan>
-<tspan x="10" y="282"> 16.  2017-04-18 21:41:49 +0000     3055 bytes  package.json</tspan>
+<tspan x="10" y="26">  0.  2017-04-18 21:42:48 +0000    46738 bytes  .</tspan>
+<tspan x="10" y="42">  1.  2017-04-18 21:42:48 +0000     1084 bytes  LICENSE</tspan>
+<tspan x="10" y="58">  2.  2017-04-18 21:42:48 +0000     9497 bytes  README.md</tspan>
+<tspan x="10" y="74">  3.  2017-04-18 21:42:48 +0000     8702 bytes  lib/container.js</tspan>
+<tspan x="10" y="90">  4.  2017-04-18 21:42:48 +0000      423 bytes  lib/errors/specnotfound.js</tspan>
+<tspan x="10" y="106">  5.  2017-04-18 21:42:48 +0000      139 bytes  lib/exposedspec.js</tspan>
+<tspan x="10" y="122">  6.  2017-04-18 21:42:48 +0000      400 bytes  lib/index.js</tspan>
+<tspan x="10" y="138">  7.  2017-04-18 21:42:48 +0000     2552 bytes  lib/injectedcontainer.js</tspan>
+<tspan x="10" y="154">  8.  2017-04-18 21:42:48 +0000     1914 bytes  lib/patterns/constructor.js</tspan>
+<tspan x="10" y="170">  9.  2017-04-18 21:42:48 +0000     1003 bytes  lib/patterns/factory.js</tspan>
+<tspan x="10" y="186"> 10.  2017-04-18 21:42:48 +0000     1119 bytes  lib/patterns/literal.js</tspan>
+<tspan x="10" y="202"> 11.  2017-04-18 21:42:48 +0000      819 bytes  lib/resolvers/id.js</tspan>
+<tspan x="10" y="218"> 12.  2017-04-18 21:42:48 +0000     1501 bytes  lib/sources/dir.js</tspan>
+<tspan x="10" y="234"> 13.  2017-04-18 21:42:48 +0000      727 bytes  lib/sources/node_modules.js</tspan>
+<tspan x="10" y="250"> 14.  2017-04-18 21:42:48 +0000     3974 bytes  lib/spec.js</tspan>
+<tspan x="10" y="266"> 15.  2017-04-18 21:42:48 +0000     9829 bytes  logo.svg</tspan>
+<tspan x="10" y="282"> 16.  2017-04-18 21:42:48 +0000     3055 bytes  package.json</tspan>
 </text>
 </svg>
